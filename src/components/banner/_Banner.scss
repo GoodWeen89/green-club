@@ -1,0 +1,55 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.banner {  
+    padding: $padding-baner;  
+    @include flex-column;  
+    position: relative; 
+    overflow: hidden;
+}  
+
+.banner_items {
+    clip-path: polygon(0 0, 100% 0%, 78% 100%, 0% 100%);
+    background-color: $banner-color;
+    position: absolute;
+    left: 0;
+    width: 48%;
+    padding: $padding-baner;
+}
+
+.banner_title {  
+    font-size: 50px;  
+    z-index: 2; 
+    max-width: 600px;
+    line-height: 60px;
+    color: $logo-green;
+}  
+
+.banner_text {   
+    font-size: 20px;  
+    color: $color-white;  
+    width: 100%;  
+    max-width: 500px;  
+    padding: $padding-vertical; 
+}  
+
+.banner_button {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    clip-path: polygon(11% 0, 100% 0%, 100% 100%, 0 99%);
+    background-color: $banner-color;
+    padding: 30px 100px 30px 120px;
+    font-weight: bold;
+    color: $logo-green;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    
+
+    &:hover {
+        background-color: $background-color-hover;
+    }
+}
+ 

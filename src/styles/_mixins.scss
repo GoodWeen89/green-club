@@ -1,0 +1,46 @@
+@mixin flex-center {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+@mixin flex-between {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+} 
+
+@mixin flex-column {  
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center; 
+} 
+
+// @mixin text-shadow-black {
+//     text-shadow: 
+//         -1px -1px 0 black,  
+//         1px -1px 0 black,  
+//         -1px  1px 0 black,  
+//         1px  1px 0 black;
+// }
+
+@mixin respond-to($media) {  
+    @if $media == mobile {  
+        @media (max-width: 600px) {  
+            @content;  
+        }  
+    }  
+    @else if $media == tablet {  
+        @media (max-width: 768px) {  
+            @content;  
+        }  
+    }  
+}  
+
+// Пример использования  
+// .header {  
+//     @include respond-to(mobile) {  
+//         background-color: $secondary-color;  
+//     }  
+// } 
+ 

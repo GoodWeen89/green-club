@@ -1,0 +1,56 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.header {  
+    @include flex-between;  
+    height: 80px;
+    padding: $padding-section; 
+    gap: $padding-large;
+}
+
+.logo {
+    font-family: "Chewy", system-ui;
+    font-size: 40px;
+    color: $logo-green;
+    transition: all 0.3s ease;
+
+    span {
+        font-family: "Chewy", system-ui;
+        color: $logo-gray;
+    }
+
+    &:hover {
+        color: $logo-gray;
+
+        & span {
+            color: $logo-green;
+        }
+    }
+}
+
+.header_search {
+    width: 100%;
+    padding: $padding-large;
+    border-radius: $padding-large;
+    background-color: $color-white;
+    @include flex-between;
+
+    input {
+        width: 100%;
+    }
+}
+
+.header_menu {
+    @include flex-center;
+    gap: $padding-large;
+}
+
+.header__menu_link {
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    color: rgb(212, 212, 212);
+
+    &:hover {
+        color: $logo-green;
+    } 
+}

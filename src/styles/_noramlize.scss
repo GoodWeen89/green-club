@@ -1,0 +1,32 @@
+body, html {
+    background-color: rgb(20, 20, 20);
+    font-family: sans-serif;
+    font-family: "Inter", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat Brush", cursive;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
